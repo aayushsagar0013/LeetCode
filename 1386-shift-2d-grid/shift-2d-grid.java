@@ -22,7 +22,7 @@ class Solution {
         return ans;
     }
     public void kickBehind(Stack<Integer> st, int[][] grid , int k) {
-        
+        k = k%(grid.length*grid[0].length);
          for(int i=grid.length-1; i>=0;i--) {
             for(int j=grid[0].length-1;j>=0; j--) {
                 if(k<=0) return;
@@ -31,6 +31,6 @@ class Solution {
             }
         }
 
-        if(k>0) kickBehind(st, grid, k);
+       // if(k>0) kickBehind(st, grid, k);
     }
 }
